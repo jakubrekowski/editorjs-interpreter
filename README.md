@@ -5,3 +5,5 @@ Convert Editor.js JSON to HTML.
 ```javascript
 interpreter(json) // output: html string 
 ```
+## Demo
+https://preview.unoff.pl/editorjs-interpreter/
