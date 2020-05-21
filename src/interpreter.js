@@ -14,6 +14,32 @@ function interpreter(input) {
             case 'paragraph':
                 output += `<p>${blocks[i].data.text}</p>`
                 break
+            case 'linkTool':
+                output += `<a href="${blocks[i].data.link}">${blocks[i].data.meta.title}</a>`
+                break
+            case 'list':
+                output += `<ul>`
+                for (let j = 0; blocks[i].data.items.length; j++) {
+                    output += `<li>${blocks[i].data.items[j]}</li>`
+                }
+                output += `</ul>`
+                break
+            case 'image':
+                output += `<img src="${blocks[i].data.file.url}" alt="${blocks[i].data.caption}">`
+                break
+            case 'code':
+                output += `<code>`
+                let splitCode = blocks[i].data.code.split('')
+                for (let j = 0; j < splitCode.length; j++) {
+                    if (splitCode[j] === '<') {
+                        output += `&lt;`
+                    } else if (splitCode[j] === '>') {
+                        output += `&gt;`
+                    } else {
+                        output += splitCode[j]
+                    }
+                }
+                output += `</code>`
         }
     }
 
