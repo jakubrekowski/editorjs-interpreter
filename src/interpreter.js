@@ -19,7 +19,7 @@ function interpreter(input) {
                 break
             case 'list':
                 output += `<ul>`
-                for (let j = 0; blocks[i].data.items.length; j++) {
+                for (let j = 0; j < blocks[i].data.items.length; j++) {
                     output += `<li>${blocks[i].data.items[j]}</li>`
                 }
                 output += `</ul>`
