@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono');
+
+:root {
+    font-size: 16px;
+
+    --secondary: #151515;
+    --light-primary: #c4c4c4;
+    --light-secondary: #a5a5a5;
+    --border: #dedede;
+    --link-primary: #3d92e0;
+    --link-secondary: #2f7ec2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    padding: 20px 30px;
+    background: #fff;
+    color: #000;
+    font-family: 'Roboto Mono', monospace;
+    border-bottom: 1px solid var(--border);
+}
+
+main {
+    display: flex;
+    justify-content: left;
+}
+
+#tabs-bar {
+    padding: 25px 30px;
+    width: 250px;
+    border-right: 1px solid var(--border);
+}
+
+#content {
+    width: 100%;
+    padding: 25px 30px;
+    background: #f7fafc;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--light-primary);
+}
+
+footer a {
+    color: var(--light-primary);
+    text-decoration: none;
+    transition: ease 200ms;
+}
+
+footer a:hover {
+    color: var(--light-secondary);
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    color: var(--link-primary);
+    text-decoration: none;
+    transition: ease 200ms;
+}
+
+a:hover {
+    color: var(--link-secondary);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.tab-before:before {
+    content: '&ensp;';
+}
+
+section#upload {
+    margin-bottom: 25px;
+    display: flex;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid var(--border);
+    outline: none;
+    width: 95%;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid var(--border);
+    outline: none;
+    transition: ease 200ms;
+    margin-left: 5px;
+}
+
+button:hover {
+    background: #e7e7e7;
+    cursor: pointer;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.margin-bottom {
+    margin-bottom: 15px;
+}
