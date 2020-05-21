@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Editor.js Interpreter :: unoff.pl</title>
+
+        <link rel="stylesheet" href="css/master.css">
+        <link rel="shortcut icon" href="img/unoff-icon.png" type="image/png">
+
+        <script src="js/index.js" defer></script>
+        <script src="js/interpreter.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-brand"><span class="text-bold">Editor.js Interpreter</span> :: unoff.pl</div>
+        </header>
+        <main>
+            <div id="tabs-bar">
+                <h3 class="no-margin">Aditional Info</h3>
+                <p>More info about this, you find in repo <a href="https://unofficial.pl/project.htm?name=editorjs-interpreter">documentation</a>.</p>
+            </div>
+            <div id="content">
+                <h3 class="no-margin margin-bottom">Demo</h3>
+                <section id="upload">
+                    <input type="text" placeholder="JSON raw" id="json-input">
+                    <button id="json-input-btn">GO</button>
+                </section>
+                <section id="output">
+                    <code id="output-code"></code>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="copy">&copy; <span id="years"></span> by <a href="https://unofficial.pl">unofficial.pl</a>.</div>
+            <div class="info"><span>MIT License</span></div>
+            <script>
+                let years = document.querySelector('#years')
+                let dateObj = new Date()
+                let actualYear = dateObj.getFullYear()
+                if (actualYear <= 2020) {
+                    years.innerHTML = '2020';
+                } else {
+                    years.innerHTML = `2020 - ${actualYear}`
+                }
+            </script>
+        </footer>
+    </body>
+</html>
